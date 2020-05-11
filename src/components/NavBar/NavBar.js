@@ -1,17 +1,26 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Link } from 'react-router-dom';
 
 // makeStyles/useStyles implements styles inline
 const useStyles = makeStyles({
-  toolStyles: {
+  navStyles: {
+    textDecoration: 'none',
+    color: '#263238',
     fontSize: '30px',
-    backgroundColor: '#fce4ec',
+    margin: '1em'
   },
-  typographyStyles: {
-    color: '#263238'
+  linkStyles: {
+    textDecoration: 'none',
+    color: '#263238',
+    fontSize: '20px',
+    margin: '1em 1em'
+  },
+  divStyles: {
+    textAlign: 'right'
   }
+
 });
 
 
@@ -21,28 +30,32 @@ const NavBar = () => {
   const classes = useStyles();
 
   return (
-    <div>
 
+    <>
       <AppBar position="static" color="primary">
-        <Toolbar className={classes.toolStyles}>
-          <Typography className={classes.typographyStyles} variant="title" >
+        <Typography variant="title" >
+          <Link to='/' className={classes.navStyles}>
             Susanna
-          </Typography>
+          </Link>
+        </Typography>
 
-          <Typography alignRight>
-            <Link href="#" >
-              About
+
+        <div className={classes.divStyles}>
+          <Link to='/about' className={classes.linkStyles}>
+            About
             </Link>
-            <Link href="#"  >
-              Projects
+          <Link to='/projects' className={classes.linkStyles}>
+            Projects
             </Link>
-            <Link href="#" >
-              Blog
+          <Link to='/blog' className={classes.linkStyles}>
+            Blog
             </Link>
-          </Typography>
-        </Toolbar>
+        </div>
       </AppBar>
-    </div>
+
+    </>
+
+
   )
 
 }
