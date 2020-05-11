@@ -5,16 +5,22 @@ import { Link } from 'react-router-dom';
 
 // makeStyles/useStyles implements styles inline
 const useStyles = makeStyles({
-  toolStyles: {
-    fontSize: '30px',
-    backgroundColor: '#fce4ec',
-  },
-  typographyStyles: {
-    color: '#263238'
-  },
   navStyles: {
-
+    textDecoration: 'none',
+    color: '#263238',
+    fontSize: '30px',
+    margin: '1em'
+  },
+  linkStyles: {
+    textDecoration: 'none',
+    color: '#263238',
+    fontSize: '20px',
+    margin: '1em 1em'
+  },
+  divStyles: {
+    textAlign: 'right'
   }
+
 });
 
 
@@ -25,28 +31,29 @@ const NavBar = () => {
 
   return (
 
-
-    <AppBar position="static" color="primary">
-      <Toolbar className={classes.toolStyles}>
-        <Typography className={classes.typographyStyles} variant="title" >
-          <Link to='/'>
+    <>
+      <AppBar position="static" color="primary">
+        <Typography variant="title" >
+          <Link to='/' className={classes.navStyles}>
             Susanna
           </Link>
         </Typography>
 
-        <div>
-          <Link to='/about'>
+
+        <div className={classes.divStyles}>
+          <Link to='/about' className={classes.linkStyles}>
             About
             </Link>
-          <Link to='/projects'>
+          <Link to='/projects' className={classes.linkStyles}>
             Projects
             </Link>
-          <Link to='/blog'>
+          <Link to='/blog' className={classes.linkStyles}>
             Blog
             </Link>
         </div>
-      </Toolbar>
-    </AppBar>
+      </AppBar>
+
+    </>
 
 
   )
