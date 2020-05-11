@@ -31,7 +31,17 @@ const Home = () => {
       <Grid container direction="column" spacing={1}  >
         <Grid container item justify="center">
           <img src={profile} className={classes.imageStyles} alt="Profile" />
+
         </Grid>
+        <Grid container item justify="center">
+          <h1>Susanna Lakey</h1>
+          <Grid container item justify="center">
+
+            <h2>Front-end Software Developer</h2>
+          </Grid>
+
+        </Grid>
+
         <Grid container item justify="center">
           <div className={classes.contactBarStyles}>
             <a href="https://www.linkedin.com/in/susanna-lakey/" className={classes.iconStyles}>

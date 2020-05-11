@@ -1,7 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Link } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { Link } from 'react-router-dom';
 
 // makeStyles/useStyles implements styles inline
 const useStyles = makeStyles({
@@ -11,6 +11,9 @@ const useStyles = makeStyles({
   },
   typographyStyles: {
     color: '#263238'
+  },
+  navStyles: {
+
   }
 });
 
@@ -21,28 +24,31 @@ const NavBar = () => {
   const classes = useStyles();
 
   return (
-    <div>
 
-      <AppBar position="static" color="primary">
-        <Toolbar className={classes.toolStyles}>
-          <Typography className={classes.typographyStyles} variant="title" >
+
+    <AppBar position="static" color="primary">
+      <Toolbar className={classes.toolStyles}>
+        <Typography className={classes.typographyStyles} variant="title" >
+          <Link to='/'>
             Susanna
-          </Typography>
+          </Link>
+        </Typography>
 
-          <Typography alignRight>
-            <Link href="#" >
-              About
+        <div>
+          <Link to='/about'>
+            About
             </Link>
-            <Link href="#"  >
-              Projects
+          <Link to='/projects'>
+            Projects
             </Link>
-            <Link href="#" >
-              Blog
+          <Link to='/blog'>
+            Blog
             </Link>
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
+        </div>
+      </Toolbar>
+    </AppBar>
+
+
   )
 
 }
