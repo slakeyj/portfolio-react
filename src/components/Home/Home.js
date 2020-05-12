@@ -37,7 +37,7 @@ const Home = () => {
           <h1>Susanna Lakey</h1>
           <Grid container item justify="center">
 
-            <h2>Front-end Software Developer</h2>
+            <h2>Frontend Software Developer</h2>
           </Grid>
 
         </Grid>
