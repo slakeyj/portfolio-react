@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   textBox: {
-    margin: '1em 0 0 1em',
+    // margin: '1em 0 0 1em',
 
 
   },
@@ -16,7 +16,8 @@ const useStyles = makeStyles({
   },
   image: {
     borderRadius: '50%',
-    marginTop: '1em'
+    marginTop: '1em',
+    height: '80%'
   },
   text: {
     margin: '3em',
@@ -39,7 +40,17 @@ const About = () => {
         {/* <Paper square elevation={3} > */}
         <div className={classes.text}>
           <h1>Hello!</h1>
-          <p>I'm Susanna Lakey and I'm a frontend software developer.</p>
+          <p className={classes.textIndent}>I'm Susanna Lakey and I'm a frontend software developer.
+          I come from a background in animal care, having worked and volunteered at
+            animal shelters in the Seattle area.</p>
+
+          <p className={classes.textIndent}>I decided it was time for a change in my life and found myself drawn
+          to software development because of the satisfaction I get from solving challenging problems and
+          the great potential of learning that it offers.</p>
+          <p className={classes.textIndent}>In my work at the animal shelter I had the opportunity to work on a team
+          and enjoyed the experience of learning from my coworkers and sharing my knowledge with them.
+          I look forward to working with a company where I can solve
+          challenging problems and to continue working in a collaborative team environment. </p>
           <p><strong>Languages:</strong> JavaScript, CSS, HTML5</p>
           <p><strong>Technologies:</strong> React, Redux, Git, GitHub, MongoDB, Mongoose, Express, Node, VSCode, Material UI
             </p>
@@ -84,12 +95,11 @@ const About = () => {
         <div className={classes.text}>
 
           <h2>Education</h2>
-          <p><strong>Code Fellows | Seattle, WA</strong></p>
+          <p><strong>Code Fellows | Seattle, WA | April 2020</strong></p>
           <p className={classes.textIndent}>Certificate - Advanced Software Development in Full-Stack JavaScript</p>
-          <p className={classes.textIndent}> </p>
-          <p className={classes.textIndent}>April 2020</p>
-          <p><strong>Bellevue College | Bellevue, WA</strong></p>
-          <p className={classes.textIndent}>Associate of Arts and Sciences, 2014</p>
+          <p><strong>Bellevue College | Bellevue, WA | 2014</strong></p>
+          <p className={classes.textIndent}>Associate of Arts and Sciences</p>
+
 
         </div>
         {/* </Paper> */}
