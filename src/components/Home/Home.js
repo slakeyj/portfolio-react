@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core'
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-
+import './Home.css'
 
 const useStyles = makeStyles({
   imageStyles: {
@@ -17,11 +17,9 @@ const useStyles = makeStyles({
   },
   iconStyles: {
     margin: '2em',
-    color: 'green'
+    color: 'black'
   }
 });
-
-
 
 const Home = () => {
   const classes = useStyles();
@@ -34,10 +32,10 @@ const Home = () => {
 
         </Grid>
         <Grid container item justify="center">
-          <h1>Susanna Lakey</h1>
+          <h1 >Susanna Lakey</h1>
           <Grid container item justify="center">
 
-            <h2>Front-end Software Developer</h2>
+            <h2>Frontend Software Developer</h2>
           </Grid>
 
         </Grid>

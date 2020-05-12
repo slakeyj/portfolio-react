@@ -7,12 +7,17 @@ import trivia from './trivia.png'
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: 345,
+    height: 340,
     marginTop: '5em'
   },
   media: {
     height: 140,
   },
+  cardActionsStyles: {
+    height: '20%',
+    position: 'absolute'
+  }
 });
 
 
@@ -23,9 +28,13 @@ const Projects = () => {
     <>
 
       {/* CLIJ */}
-
+      <Grid container justify="center">
+        <Grid item >
+          <h1>Projects</h1>
+        </Grid>
+      </Grid>
       <Grid container direction="row" spacing={10} justify="center">
-        <Grid item spacing={3}>
+        <Grid item >
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
@@ -44,22 +53,22 @@ const Projects = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <a href="https://cli-journal.web.app/">
+              <a target="_blank" href="https://cli-journal.web.app/">
                 <Button size="small" color="primary">
                   Visit
-      </Button>
+                </Button>
               </a>
-              <a href="https://github.com/Coders-Living-Instant-Work-Journal">
+              <a target="_blank" href="https://github.com/Coders-Living-Instant-Work-Journal">
                 <Button size="small" color="primary">
                   Github
-      </Button>
+                </Button>
               </a>
             </CardActions>
           </Card >
         </Grid>
 
         {/* Trip Up */}
-        <Grid item spacing={10}>
+        <Grid item >
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
@@ -77,10 +86,10 @@ const Projects = () => {
           </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
+            <CardActions className={classes.cardActionsStyles}>
 
 
-              <a href="https://github.com/trip-up/trip-up">
+              <a target="_blank" href="https://github.com/trip-up/trip-up">
                 <Button size="small" color="primary">
                   Github
               </Button>
@@ -90,8 +99,9 @@ const Projects = () => {
         </Grid>
 
         {/* Star Wars Games */}
-        <Grid item spacing={10}>
+        <Grid item >
           <Card className={classes.root}>
+
             <CardActionArea>
               <CardMedia
                 className={classes.media}
@@ -109,13 +119,13 @@ const Projects = () => {
             </Typography>
               </CardContent>
             </CardActionArea>
-            <CardActions>
-              <a href="http://star-wars-games.herokuapp.com/">
+            <CardActions className={classes.cardActionsStyles}>
+              <a target="_blank" href="http://star-wars-games.herokuapp.com/">
                 <Button size="small" color="primary">
                   Visit
               </Button>
               </a>
-              <a href="https://github.com/CF-Jass/project-week">
+              <a target="_blank" href="https://github.com/CF-Jass/project-week">
                 <Button size="small" color="primary">
                   Github
               </Button>
