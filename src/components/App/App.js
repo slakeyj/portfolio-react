@@ -7,6 +7,9 @@ import theme from '../../theme';
 import About from '../About/About';
 import Projects from '../Projects/Projects'
 import Footer from '../Footer/Footer'
+
+
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
