@@ -55,9 +55,6 @@ const NavBar = () => {
           <Link to='/projects' className={classes.linkStyles}>
             Projects
             </Link>
-          <Link to='/blog' className={classes.linkStyles}>
-            Blog
-            </Link>
         </div>
       </AppBar>
 
