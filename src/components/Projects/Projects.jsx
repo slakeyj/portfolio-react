@@ -4,6 +4,7 @@ import { Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typo
 import loginImage from './clij.png'
 import createTrip from './create-trip.png'
 import trivia from './trivia.png'
+import calculator from './calculator.png'
 
 const useStyles = makeStyles({
   root: {
@@ -26,30 +27,70 @@ const Projects = () => {
 
   return (
     <>
-
-      {/* CLIJ */}
       <Grid container justify="center">
         <Grid item >
           <h1>Projects</h1>
         </Grid>
       </Grid>
       <Grid container direction="row" spacing={10} justify="center">
+
+      {/* Calculator */}
+      <Grid item >
+          <Card className={classes.root}>
+            <CardActionArea>
+            <a target="_blank" href="https://slakeyj.github.io/calculator/">
+              <CardMedia
+                className={classes.media}
+                image={calculator}
+                title="calculator"
+              />
+              </a>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Calculator
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  A basic calculator built with React.
+                  <br></br>
+                  <br></br>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            
+            <CardActions className={classes.cardActionsStyles}>
+            <a target="_blank" href="https://slakeyj.github.io/calculator/">
+                <Button size="small" color="primary">
+                  Visit
+                </Button>
+              </a>
+              <a target="_blank" href="https://github.com/slakeyj/calculator">
+                <Button size="small" color="primary">
+                  Github
+              </Button>
+              </a>
+            </CardActions>
+          </Card >
+        </Grid>
+        
+        {/* CLIJ */}
         <Grid item >
           <Card className={classes.root}>
             <CardActionArea>
+            <a target="_blank" href="https://cli-journal.web.app/">
               <CardMedia
                 className={classes.media}
                 image={loginImage}
                 title="CLIJ"
               />
+              </a>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Coder's Living Instant Journal
-        </Typography>
+                </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   An application that allows a user to create, read, update, and delete categorized journals from their terminal and the web app at cli-journal.web.app
-
-        </Typography>
+                  
+                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
@@ -71,24 +112,25 @@ const Projects = () => {
         <Grid item >
           <Card className={classes.root}>
             <CardActionArea>
+            <a target="_blank" href="https://github.com/trip-up/trip-up">
               <CardMedia
                 className={classes.media}
                 image={createTrip}
                 title="trip up create trip"
               />
+              </a>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Trip Up API
-               </Typography>
+                </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  An API to help plan and coordinate group trips
-
-          </Typography>
+                  An API to help plan and coordinate group trips 
+                  <br></br>
+                  <br></br> 
+                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions className={classes.cardActionsStyles}>
-
-
               <a target="_blank" href="https://github.com/trip-up/trip-up">
                 <Button size="small" color="primary">
                   Github
@@ -101,22 +143,21 @@ const Projects = () => {
         {/* Star Wars Games */}
         <Grid item >
           <Card className={classes.root}>
-
             <CardActionArea>
+            <a target="_blank" href="http://star-wars-games.herokuapp.com/">
               <CardMedia
                 className={classes.media}
                 image={trivia}
                 title="star wars trivia"
               />
+              </a>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Star Wars Games
-             </Typography>
+                </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
                   A Star Wars themed game site that allows users to compare their high scores
-
-
-            </Typography>
+                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions className={classes.cardActionsStyles}>
