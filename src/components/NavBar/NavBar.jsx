@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     textDecoration: 'none',
     color: '#263238',
     fontSize: '20px',
-    margin: '1em 1em',
+    margin: '0em 1em 1em 1em',
     '&:hover': {
       textDecoration: 'underline'
     }
@@ -37,10 +37,8 @@ const NavBar = () => {
   const classes = useStyles();
 
   return (
-
     <>
       <AppBar className='nav' position="static" color="primary">
-
         <Typography variant="title" >
           <Link to='/' className={classes.navStyles}>
             Susanna
