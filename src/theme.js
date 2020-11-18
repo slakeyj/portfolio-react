@@ -1,16 +1,14 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-
-
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#CACACA'
-    }
+      main: '#333',
+    },
   },
   typography: {
-    fontFamily: "Arial"
-  }
+    fontFamily: 'Arial',
+  },
 });
 
-export default theme
+export default theme;
