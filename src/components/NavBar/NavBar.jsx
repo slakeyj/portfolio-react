@@ -1,66 +1,79 @@
 import React from 'react';
-import { AppBar, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
-import './NavBar.css'
+import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+// import { makeStyles } from '@material-ui/core/styles';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import Link from '@material-ui/core/Link';
+import './NavBar.css';
 
 // makeStyles/useStyles implements styles inline
-const useStyles = makeStyles({
-  navStyles: {
-    textDecoration: 'none',
-    color: '#263238',
-    fontSize: '30px',
-    margin: '1em',
-    '&:hover': {
-      textDecoration: 'underline'
-    }
-  },
-  linkStyles: {
-    textDecoration: 'none',
-    color: '#263238',
-    fontSize: '20px',
-    margin: '0em 1em 1em 1em',
-    '&:hover': {
-      textDecoration: 'underline'
-    }
-  },
-  divStyles: {
-    textAlign: 'right'
-  }
-
-});
-
-
-
+// const useStyles = makeStyles({
+//   navStyles: {
+//     textDecoration: 'none',
+//     color: '#263238',
+//     fontSize: '30px',
+//     margin: '1em',
+//     '&:hover': {
+//       textDecoration: 'underline',
+//     },
+//   },
+//   linkStyles: {
+//     textDecoration: 'none',
+//     color: '#263238',
+//     fontSize: '20px',
+//     margin: '0em 1em 1em 1em',
+//     '&:hover': {
+//       textDecoration: 'underline',
+//     },
+//   },
+//   divStyles: {
+//     justifyContent: 'flex-end',
+//   },
+// });
 
 const NavBar = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <>
-      <AppBar className='nav' position="static" color="primary">
-        <Typography variant="title" >
-          <Link to='/' className={classes.navStyles}>
-            Susanna
-          </Link>
-        </Typography>
-
-
-        <div className={classes.divStyles}>
-          <Link to='/about' className={classes.linkStyles}>
-            About
+      <AppBar position='static' color='primary'>
+        <Box
+          bgcolor='#FAE9F9'
+          display='flex'
+          flexDirection='row'
+          justifyContent='space-between'
+          pt={1}
+        >
+          <Typography variant='h4' component='h1'>
+            <Link component={ReactRouterLink} to='/' underline='hover'>
+              <Box fontFamily='Quattrocento' mx={1}>
+                Susanna
+              </Box>
             </Link>
-          <Link to='/projects' className={classes.linkStyles}>
-            Projects
-            </Link>
-        </div>
+          </Typography>
+          <Box display='flex' alignItems='flex-end'>
+            <Typography variant='h5' component='h2'>
+              <Link component={ReactRouterLink} to='/about' underline='hover'>
+                <Box display='inline' fontFamily='Quattrocento' mx={1}>
+                  About
+                </Box>
+              </Link>
+              <Link
+                component={ReactRouterLink}
+                to='/projects'
+                underline='hover'
+              >
+                <Box display='inline' fontFamily='Quattrocento' mx={1}>
+                  Projects
+                </Box>
+              </Link>
+            </Typography>
+          </Box>
+        </Box>
       </AppBar>
-
     </>
-
-
-  )
-
-}
+  );
+};
 
 export default NavBar;

@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
-
-
 .nav {
   font-family: 'Quattrocento', serif;
-  height: 5em
+  height: 5em;
+  display: flex;
+  align-items: flex-end;
 }
