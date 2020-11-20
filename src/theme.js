@@ -9,6 +9,11 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: 'Arial',
   },
+  props: {
+    MuiButtonBase: {
+      disableRipple: true,
+    },
+  },
 });
 
 export default theme;
