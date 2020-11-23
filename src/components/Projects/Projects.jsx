@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -16,10 +16,46 @@ import calculator from './calculator.png';
 const useStyles = makeStyles({
   root: {
     width: 345,
-    // height: 340,
+    height: 375,
     marginTop: '4em',
   },
 });
+
+const ProjectCard = ({ image, title, description, visitHref, githubHref }) => {
+  const classes = useStyles();
+
+  return (
+    <Card className={classes.root}>
+      <Box display='flex' flexDirection='column' height='100%'>
+        <CardMedia
+          component='img'
+          alt={title}
+          height='140'
+          image={image}
+          title={title}
+        />
+        <Box flexGrow={1}>
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              {title}
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              {description}
+            </Typography>
+          </CardContent>
+        </Box>
+        <CardActions>
+          <Button href={visitHref} size='large' color='primary'>
+            Visit
+          </Button>
+          <Button href={githubHref} size='large' color='primary'>
+            Github
+          </Button>
+        </CardActions>
+      </Box>
+    </Card>
+  );
+};
 
 const Projects = () => {
   const classes = useStyles();
@@ -28,113 +64,50 @@ const Projects = () => {
     <>
       <Grid container justify='center'>
         <Grid item>
-          <h1>Projects</h1>
+          <Typography variant='subtitle1'>Projects</Typography>
         </Grid>
       </Grid>
       <Grid container direction='row' spacing={8} justify='center'>
         {/* Calculator */}
         <Grid item>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component='img'
-                alt='Calculator'
-                height='140'
-                image={calculator}
-                title='calculator'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  Calculator
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  A basic calculator built with React.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-
-            <CardActions>
-              <Button
-                href='https://slakeyj.github.io/calculator/'
-                size='large'
-                color='primary'
-              >
-                Visit
-              </Button>
-              <Button
-                href='https://github.com/slakeyj/calculator'
-                size='large'
-                color='primary'
-              >
-                Github
-              </Button>
-              {/* </Grid> */}
-            </CardActions>
-          </Card>
+          <ProjectCard
+            title='Calculator'
+            image={calculator}
+            description='A basic calculator built with React'
+            visitHref='https://slakeyj.github.io/calculator/'
+            githubHref='https://github.com/slakeyj/calculator'
+          />
         </Grid>
-
         {/* CLIJ */}
         <Grid item>
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component='img'
-                height='140'
-                alt='coders living instant journal'
-                image={loginImage}
-                title='CLIJ'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  Coder's Living Instant Journal
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  An application that allows a user to create, read, update, and
-                  delete categorized journals from their terminal and the web
-                  app at cli-journal.web.app
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button
-                href='https://cli-journal.web.app/'
-                size='large'
-                color='primary'
-              >
-                Visit
-              </Button>
-              <Button
-                href='https://github.com/Coders-Living-Instant-Work-Journal'
-                size='large'
-                color='primary'
-              >
-                Github
-              </Button>
-            </CardActions>
-          </Card>
+          <ProjectCard
+            title="Coder's Living Instant Journal"
+            image={loginImage}
+            description='An application that allows a user to create, read, update, and delete categorized journals from their terminal and the web app at cli-journal.web.app'
+            visitHref='https://cli-journal.web.app/'
+            githubHref='https://github.com/Coders-Living-Instant-Work-Journal'
+          />
         </Grid>
 
         {/* Trip Up */}
         <Grid item>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                alt='trip up'
-                component='img'
-                height='140'
-                image={createTrip}
-                title='trip up create trip'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  Trip Up API
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  An API to help plan and coordinate group trips
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.cardActionsStyles}>
+            <CardMedia
+              alt='trip up'
+              component='img'
+              height='140'
+              image={createTrip}
+              title='trip up create trip'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Trip Up API
+              </Typography>
+              <Typography variant='body2' color='textSecondary' component='p'>
+                An API to help plan and coordinate group trips
+              </Typography>
+            </CardContent>
+            <CardActions>
               <Button
                 href='https://github.com/trip-up/trip-up'
                 size='large'
@@ -149,24 +122,22 @@ const Projects = () => {
         {/* Star Wars Games */}
         <Grid item>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component='img'
-                alt='star wars trivia'
-                height='140'
-                image={trivia}
-                title='star wars trivia'
-              />
-              <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  Star Wars Games
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  A Star Wars themed game site that allows users to compare
-                  their high scores
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardMedia
+              component='img'
+              alt='star wars trivia'
+              height='140'
+              image={trivia}
+              title='star wars trivia'
+            />
+            <CardContent>
+              <Typography gutterBottom variant='h5' component='h2'>
+                Star Wars Games
+              </Typography>
+              <Typography variant='body2' color='textSecondary' component='p'>
+                A Star Wars themed game site that allows users to compare their
+                high scores
+              </Typography>
+            </CardContent>
             <Button
               href='http://star-wars-games.herokuapp.com/'
               size='large'

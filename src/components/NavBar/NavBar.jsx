@@ -4,7 +4,6 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
-import './NavBar.css';
 
 const NavBar = () => {
   return (
