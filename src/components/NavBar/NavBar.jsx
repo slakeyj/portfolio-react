@@ -2,39 +2,10 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-// import { makeStyles } from '@material-ui/core/styles';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
-import './NavBar.css';
-
-// makeStyles/useStyles implements styles inline
-// const useStyles = makeStyles({
-//   navStyles: {
-//     textDecoration: 'none',
-//     color: '#263238',
-//     fontSize: '30px',
-//     margin: '1em',
-//     '&:hover': {
-//       textDecoration: 'underline',
-//     },
-//   },
-//   linkStyles: {
-//     textDecoration: 'none',
-//     color: '#263238',
-//     fontSize: '20px',
-//     margin: '0em 1em 1em 1em',
-//     '&:hover': {
-//       textDecoration: 'underline',
-//     },
-//   },
-//   divStyles: {
-//     justifyContent: 'flex-end',
-//   },
-// });
 
 const NavBar = () => {
-  // const classes = useStyles();
-
   return (
     <>
       <AppBar position='static' color='primary'>
@@ -47,7 +18,7 @@ const NavBar = () => {
         >
           <Typography variant='h4' component='h1'>
             <Link component={ReactRouterLink} to='/' underline='hover'>
-              <Box fontFamily='Quattrocento' mx={1}>
+              <Box fontFamily='Quattrocento' mx={2}>
                 Susanna
               </Box>
             </Link>
@@ -64,7 +35,7 @@ const NavBar = () => {
                 to='/projects'
                 underline='hover'
               >
-                <Box display='inline' fontFamily='Quattrocento' mx={1}>
+                <Box display='inline' fontFamily='Quattrocento' mx={2}>
                   Projects
                 </Box>
               </Link>
