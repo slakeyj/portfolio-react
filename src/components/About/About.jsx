@@ -77,6 +77,18 @@ const About = () => {
             </Typography>
 
             <Typography paragraph={true} gutterBottom={true}>
+              <strong>Code Fellows | Teaching Assistant | Seattle, WA</strong>
+            </Typography>
+            <Typography paragraph={true} gutterBottom={true}>
+              May 2020 - October 2020
+            </Typography>
+            <Typography paragraph={true} gutterBottom={true}>
+              Code reviewing of student Javascript homework submissions for
+              grading purposes. Mentoring students on good coding practices and
+              problem solving abilities.
+            </Typography>
+
+            <Typography paragraph={true} gutterBottom={true}>
               <strong>
                 MEOW Cat Rescue | Shelter Caregiver | Kirkland, WA
               </strong>

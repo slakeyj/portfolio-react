@@ -18,7 +18,7 @@ const NavBar = () => {
         >
           <Typography variant='h4' component='h1'>
             <Link component={ReactRouterLink} to='/' underline='hover'>
-              <Box fontFamily='Quattrocento' mx={1}>
+              <Box fontFamily='Quattrocento' mx={2}>
                 Susanna
               </Box>
             </Link>
@@ -35,7 +35,7 @@ const NavBar = () => {
                 to='/projects'
                 underline='hover'
               >
-                <Box display='inline' fontFamily='Quattrocento' mx={1}>
+                <Box display='inline' fontFamily='Quattrocento' mx={2}>
                   Projects
                 </Box>
               </Link>
