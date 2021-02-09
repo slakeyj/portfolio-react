@@ -6,6 +6,7 @@ import loginImage from './clij.png';
 import createTrip from './create-trip.png';
 import trivia from './trivia.png';
 import calculator from './calculator.png';
+import planIt from './plan-it.png';
 
 const Projects = () => {
   return (
@@ -16,6 +17,15 @@ const Projects = () => {
         </Grid>
       </Grid>
       <Grid container direction='row' spacing={8} justify='center'>
+        {/* Plan It */}
+        <Grid item>
+          <ProjectCard
+            title='Plan It'
+            image={planIt}
+            description='A to-do app built with TypeScript, React, and Material UI'
+            githubHref='https://github.com/slakeyj/to-do-typescript'
+          />
+        </Grid>
         {/* Calculator */}
         <Grid item>
           <ProjectCard
