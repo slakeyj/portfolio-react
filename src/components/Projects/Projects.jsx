@@ -23,6 +23,7 @@ const Projects = () => {
             title='Plan It'
             image={planIt}
             description='A to-do app built with TypeScript, React, and Material UI'
+            visitHref='https://github.com/slakeyj/to-do-typescript'
             githubHref='https://github.com/slakeyj/to-do-typescript'
           />
         </Grid>
