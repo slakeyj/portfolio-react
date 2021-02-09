@@ -5,16 +5,16 @@ const useStyles = makeStyles({
   footerStyles: {
     height: '6em',
     marginTop: '12em',
-    textAlign: 'center'
-  }
-})
+    textAlign: 'center',
+  },
+});
 
 const Footer = () => {
   const classes = useStyles();
 
   return (
-    <footer className={classes.footerStyles}>&copy;2020 Susanna Lakey</footer>
-  )
-}
+    <footer className={classes.footerStyles}>&copy;2021 Susanna Lakey</footer>
+  );
+};
 
 export default Footer;
