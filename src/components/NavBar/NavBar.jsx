@@ -31,8 +31,8 @@ const NavBar = () => {
                   border: '4px solid #5e6472 ',
                   borderRadius: '50%',
                   padding: '0.2em',
-                  width: '70px',
-                  height: '70px',
+                  width: '1.8em',
+                  height: '1.8em',
                 }}
                 mx={2}
                 mb={1}

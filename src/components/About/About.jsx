@@ -5,18 +5,12 @@ import profile from '../Home/profile.jpg';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-const Cell = ({ children }) => (
-  <Box m={6} mx={40} fontSize={18}>
-    {children}
-  </Box>
-);
-
 const imageSize = '30%';
 
 const About = () => {
   return (
     <>
-      <Cell>
+      <Box m={4}>
         <Avatar
           alt='Profile'
           src={profile}
@@ -27,22 +21,22 @@ const About = () => {
             marginRight: 'auto',
           }}
         />
-      </Cell>
-
-      <Cell>
+      </Box>
+      <Box mx={15}>
         <Typography color='secondary' variant='subtitle1' component='h1'>
           Hello!
         </Typography>
-
+      </Box>
+      <Box mx={15}>
         <Typography paragraph={true} gutterBottom={true}>
           I'm Susanna Lakey and I'm a frontend software developer. I come from a
           background in animal care, having worked and volunteered at animal
           shelters in the Seattle area.
         </Typography>
-        <Button variant='contained' color='secondary'>
+        <Button variant='contained' color='secondary' href='/slakey-resume.pdf'>
           Resume
         </Button>
-      </Cell>
+      </Box>
     </>
   );
 };

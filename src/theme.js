@@ -30,7 +30,7 @@ const theme = createMuiTheme({
     },
     h6: {
       fontFamily: 'Bowlby One SC, cursive',
-      fontSize: '2.7em',
+      fontSize: '1.7em',
     },
   },
   props: {
