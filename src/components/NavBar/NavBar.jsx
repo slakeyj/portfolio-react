@@ -10,31 +10,45 @@ const NavBar = () => {
     <>
       <AppBar position='static' color='primary'>
         <Box
-          bgcolor='#FAE9F9'
+          bgcolor='#edf6f9'
           display='flex'
           flexDirection='row'
           justifyContent='space-between'
           pt={1}
         >
-          <Typography variant='h4' component='h1'>
-            <Link component={ReactRouterLink} to='/' underline='hover'>
-              <Box fontFamily='Quattrocento' mx={2}>
-                Susanna
+          <Typography variant='h6' component='h1'>
+            <Link
+              color='secondary'
+              component={ReactRouterLink}
+              to='/'
+              underline='none'
+            >
+              <Box
+                display='flex'
+                justifyContent='center'
+                alignItems='center'
+                style={{
+                  border: '4px solid #5e6472 ',
+                  borderRadius: '50%',
+                  padding: '0.2em',
+                  width: '70px',
+                  height: '70px',
+                }}
+                mx={2}
+                mb={1}
+              >
+                sl
               </Box>
             </Link>
           </Typography>
           <Box display='flex' alignItems='flex-end'>
             <Typography variant='h5' component='h2'>
-              <Link component={ReactRouterLink} to='/about' underline='hover'>
+              <Link component={ReactRouterLink} to='/about' underline='none'>
                 <Box display='inline' fontFamily='Quattrocento' mx={1}>
                   About
                 </Box>
               </Link>
-              <Link
-                component={ReactRouterLink}
-                to='/projects'
-                underline='hover'
-              >
+              <Link component={ReactRouterLink} to='/projects' underline='none'>
                 <Box display='inline' fontFamily='Quattrocento' mx={2}>
                   Projects
                 </Box>

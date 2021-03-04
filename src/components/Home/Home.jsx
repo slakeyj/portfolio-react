@@ -21,24 +21,26 @@ const Home = () => (
         }}
       />
     </Box>
-    <Typography variant='subtitle1' component='h2'>
-      <Box fontSize='3rem'>Susanna Lakey</Box>
-    </Typography>
-    <Typography variant='subtitle2' component='h2'>
-      <Box fontSize='1.5rem'>Frontend Software Developer</Box>
-    </Typography>
-    <Box display='flex' mt={2}>
-      <Box display='inline' my={1} mx={4}>
+    <Box m={2}>
+      <Typography color='secondary' variant='h3' component='h2'>
+        <Box>Susanna Lakey</Box>
+      </Typography>
+      <Typography color='error' variant='subtitle2' component='h2'>
+        <Box>Frontend Software Developer</Box>
+      </Typography>
+    </Box>
+    <Box justifyContent='center' display='flex' s>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://www.linkedin.com/in/susanna-lakey/'>
           <LinkedInIcon />
         </Link>
       </Box>
-      <Box display='inline' my={1} mx={4}>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://github.com/slakeyj'>
           <GitHubIcon />
         </Link>
       </Box>
-      <Box display='inline' my={1} mx={4}>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://twitter.com/susannalakey'>
           <TwitterIcon />
         </Link>
