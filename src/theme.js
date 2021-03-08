@@ -24,6 +24,16 @@ const theme = createMuiTheme({
       fontWeight: 600,
       letterSpacing: '2px',
     },
+    body1: {
+      fonSize: '8px',
+    },
+    body2: {
+      fontFamily: 'Quattrocento',
+      fontSize: '1.1em',
+    },
+    h1: {
+      fontSize: '1em',
+    },
     h3: {
       fontFamily: 'Satisfy, cursive',
       fontSize: '5.5rem',

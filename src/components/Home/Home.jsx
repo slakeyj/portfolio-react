@@ -16,8 +16,8 @@ const Home = () => (
         src={profile}
         alt='Profile'
         style={{
-          width: '300px',
-          height: '300px',
+          width: '350px',
+          height: '350px',
         }}
       />
     </Box>
@@ -32,17 +32,17 @@ const Home = () => (
     <Box justifyContent='center' display='flex' s>
       <Box display='inline' my={1} mx={6}>
         <Link href='https://www.linkedin.com/in/susanna-lakey/'>
-          <LinkedInIcon />
+          <LinkedInIcon color='error' />
         </Link>
       </Box>
       <Box display='inline' my={1} mx={6}>
         <Link href='https://github.com/slakeyj'>
-          <GitHubIcon />
+          <GitHubIcon color='error' />
         </Link>
       </Box>
       <Box display='inline' my={1} mx={6}>
         <Link href='https://twitter.com/susannalakey'>
-          <TwitterIcon />
+          <TwitterIcon color='error' />
         </Link>
       </Box>
     </Box>

@@ -31,10 +31,10 @@ const ProjectCard = ({ image, title, description, visitHref, githubHref }) => {
         />
         <Box flexGrow={1}>
           <CardContent>
-            <Typography gutterBottom variant='h5' component='h2'>
+            <Typography gutterBottom variant='h1' component='h2'>
               {title}
             </Typography>
-            <Typography variant='body2' color='textSecondary' component='p'>
+            <Typography variant='body1' color='textSecondary' component='p'>
               {description}
             </Typography>
           </CardContent>
