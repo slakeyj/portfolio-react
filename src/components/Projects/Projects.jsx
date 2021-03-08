@@ -13,7 +13,9 @@ const Projects = () => {
     <>
       <Grid container justify='center'>
         <Grid item>
-          <Typography variant='subtitle1'>Projects</Typography>
+          <Typography color='secondary' variant='subtitle1'>
+            Projects
+          </Typography>
         </Grid>
       </Grid>
       <Grid container direction='row' spacing={8} justify='center'>

@@ -16,31 +16,33 @@ const Home = () => (
         src={profile}
         alt='Profile'
         style={{
-          width: '300px',
-          height: '300px',
+          width: '350px',
+          height: '350px',
         }}
       />
     </Box>
-    <Typography variant='subtitle1' component='h2'>
-      <Box fontSize='3rem'>Susanna Lakey</Box>
-    </Typography>
-    <Typography variant='subtitle2' component='h2'>
-      <Box fontSize='1.5rem'>Frontend Software Developer</Box>
-    </Typography>
-    <Box display='flex' mt={2}>
-      <Box display='inline' my={1} mx={4}>
+    <Box m={2}>
+      <Typography color='secondary' variant='h3' component='h2'>
+        <Box>Susanna Lakey</Box>
+      </Typography>
+      <Typography color='error' variant='subtitle2' component='h2'>
+        <Box>Frontend Software Developer</Box>
+      </Typography>
+    </Box>
+    <Box justifyContent='center' display='flex' s>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://www.linkedin.com/in/susanna-lakey/'>
-          <LinkedInIcon />
+          <LinkedInIcon color='error' />
         </Link>
       </Box>
-      <Box display='inline' my={1} mx={4}>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://github.com/slakeyj'>
-          <GitHubIcon />
+          <GitHubIcon color='error' />
         </Link>
       </Box>
-      <Box display='inline' my={1} mx={4}>
+      <Box display='inline' my={1} mx={6}>
         <Link href='https://twitter.com/susannalakey'>
-          <TwitterIcon />
+          <TwitterIcon color='error' />
         </Link>
       </Box>
     </Box>
