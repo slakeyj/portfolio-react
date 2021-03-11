@@ -1,19 +1,14 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-  footerStyles: {
-    height: '6em',
-    marginTop: '12em',
-    textAlign: 'center',
-  },
-});
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 const Footer = () => {
-  const classes = useStyles();
-
   return (
-    <footer className={classes.footerStyles}>&copy;2021 Susanna Lakey</footer>
+    <footer>
+      <Box mt={3}>
+        <Typography align="center">&copy;2021 Susanna Lakey</Typography>
+      </Box>
+    </footer>
   );
 };
 
