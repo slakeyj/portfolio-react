@@ -20,9 +20,9 @@ const theme = createMuiTheme({
     },
     subtitle2: {
       fontFamily: 'Merriweather Sans, sans-serif',
-      fontSize: '2rem',
+      fontSize: '1.2rem',
       fontWeight: 600,
-      letterSpacing: '2px',
+      letterSpacing: '1.8px',
     },
     body1: {
       fonSize: '8px',
@@ -36,7 +36,7 @@ const theme = createMuiTheme({
     },
     h3: {
       fontFamily: 'Satisfy, cursive',
-      fontSize: '5.5rem',
+      fontSize: '3.8rem',
     },
     h6: {
       fontFamily: 'Bowlby One SC, cursive',
